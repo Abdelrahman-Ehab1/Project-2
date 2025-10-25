@@ -1,6 +1,6 @@
-package controller;
+package src.controller;
 
-import model.Student;
+import src.model.Student;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -18,7 +18,8 @@ public Student createRecordFrom(String line) {
     String[] parts = line.split(",");
     int studentAge = Integer.parseInt(parts[2]);
     boolean studentGender = Boolean.parseBoolean(parts[3]);
-    return new Student(parts[0], parts[1],studentAge ,studentGender , parts[4]);
+       float gpa = Float.parseFloat(parts[5]);
+    return new Student(parts[0], parts[1], studentAge, studentGender, parts[4], gpa);
 }
 
     public void readFromFile() {
