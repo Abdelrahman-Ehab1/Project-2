@@ -1,8 +1,11 @@
 package view;
+
 import controller.AdminRole;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class AddStudent extends JFrame{
     private JPanel AddStudentPanel;
@@ -30,7 +33,7 @@ private float GPA=-1;
         setVisible(true);
         setContentPane(AddStudentPanel);
         setTitle("Add Student");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400,400);
         setLayout(null);
         setLocationRelativeTo(null);
@@ -95,9 +98,20 @@ private float GPA=-1;
         closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                MainWindow main = new MainWindow();
+                main.setVisible(true);
                 dispose();
             }
         });
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                MainWindow main =  new MainWindow();
+                main.setVisible(true); // Show previous frame
+                dispose();
+            }
+        });
+
     }
 
 }
