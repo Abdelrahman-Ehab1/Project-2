@@ -14,10 +14,13 @@ public class StudentDatabase {
     }
 
 //    public abstract Student createRecordFrom(String line);
-    public Student createRecordFrom(String line) {
+public Student createRecordFrom(String line) {
     String[] parts = line.split(",");
     int studentAge = Integer.parseInt(parts[2]);
-    boolean studentGender = Boolean.parseBoolean(parts[3]);
+
+    boolean studentGender ;
+    studentGender = parts[3].trim().equalsIgnoreCase("true");
+
        float gpa = Float.parseFloat(parts[5]);
     return new Student(parts[0], parts[1], studentAge, studentGender, parts[4], gpa);
 }
