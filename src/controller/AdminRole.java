@@ -1,3 +1,5 @@
+package controller;
+
 import controller.StudentDatabase;
 import model.Student;
 

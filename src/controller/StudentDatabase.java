@@ -14,7 +14,7 @@ public class StudentDatabase {
     }
 
 //    public abstract Student createRecordFrom(String line);
-public Student createRecordFrom(String line) {
+    public Student createRecordFrom(String line) {
     String[] parts = line.split(",");
     int studentAge = Integer.parseInt(parts[2]);
     boolean studentGender = Boolean.parseBoolean(parts[3]);
