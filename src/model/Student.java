@@ -1,4 +1,4 @@
-package model;
+package src.model;
 
 public class Student {
     private String studentID;
@@ -8,7 +8,7 @@ public class Student {
     private String department;
     private float gpa;
 
-    public Student(String studentID, String name, int age, boolean gender, String department,float gpa){
+    public Student(String studentID, String name, int age, boolean gender, String department,float gpa){  // to be modified
         this.studentID = studentID;
         this.name = name;
         this.age = age;
@@ -17,25 +17,13 @@ public class Student {
         this.gpa =gpa;
     }
 
-    public String lineRepresentation() {
-//        String ageStr = Integer.toString(age);
-//        String genderStr = Boolean.toString(gender);
-//        String gpaStr = float.toString(gpa);
+    public String lineRepresentation() {  // sent to database
         String line = studentID + "," + name + "," + age + "," + gender + "," + department +","+ gpa;
         return line;
     }
 
-
-    public String getSearchKey() {
+    public String getSearchKey() {   // will be used to delete or update student
         return studentID;
     }
 
-
-    public String toString() {
-        return "Student ID: " + studentID +
-                ", Name: " + name +
-                ", age: " + age +
-                ", gender: " + gender +
-                ", Department: " + department;
-    }
 }
