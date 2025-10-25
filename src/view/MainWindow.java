@@ -33,6 +33,9 @@ public class MainWindow extends JFrame {
         addStudentBn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                AddStudent addStudent = new AddStudent();
+                addStudent.setVisible(true);
+                dispose();
 
             }
         });
