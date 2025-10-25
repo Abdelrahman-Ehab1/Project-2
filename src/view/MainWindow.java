@@ -42,7 +42,9 @@ public class MainWindow extends JFrame {
         viewStudentsBn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                ViewStudents viewPage = new ViewStudents();
+                viewPage.setVisible(true);
+                dispose();
             }
         });
         updateStudentBn.addActionListener(new ActionListener() {
