@@ -1,6 +1,6 @@
-package src.controller;
+package controller;
 
-import src.model.Student;
+import model.Student;
 import java.io.*;
 import java.util.ArrayList;
 
