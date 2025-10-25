@@ -20,7 +20,7 @@ public class AdminRole {
             database.saveToFile();
         }
         else
-            System.out.println("employee already exists !");
+            System.out.println("Student already exists !");
     }
 
     public void removeStudent(String key){
@@ -29,7 +29,7 @@ public class AdminRole {
             database.saveToFile();
         }
         else
-            System.out.println("No employee with this ID ");
+            System.out.println("No Student with this ID ");
     }
 
     public Student[] getListOfStudents(){
