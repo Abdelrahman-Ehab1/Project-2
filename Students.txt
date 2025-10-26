@@ -3,3 +3,5 @@
 1266,kk ll,21,true,Software,3.1
 123456,sfw hh,20,true,sffs,3.0
 1234567,Bob lld,21,true,dfgd,2.1
+9396,Mohamed Nasser,20,true,Mechanical,3.999
+9441,Mohamed Hany,21,true,Compue,3.4
