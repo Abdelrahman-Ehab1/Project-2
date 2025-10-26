@@ -58,6 +58,10 @@ public class MainWindow extends JFrame {
         deleteStudentBn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                DeleteFrame deletePage = new DeleteFrame();
+                deletePage.setVisible(true);
+                dispose();
+
 
             }
         });
