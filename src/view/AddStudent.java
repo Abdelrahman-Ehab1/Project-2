@@ -102,7 +102,6 @@ private float GPA=-1;
                 }
                 Admin.addStudent(Id, name, age, gender, Department, GPA);
                 JOptionPane.showMessageDialog(AddStudentPanel, "Student Added");
-                setVisible(false);
             }
         });
 
