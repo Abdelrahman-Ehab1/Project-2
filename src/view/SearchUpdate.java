@@ -2,13 +2,9 @@ package view;
 
 import controller.AdminRole;
 import model.Student;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 
 public class SearchUpdate extends JFrame {
     private JTextField SearchField;
@@ -105,6 +101,8 @@ AdminRole x=new AdminRole();
         closeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                MainWindow main = new MainWindow();
+                main.setVisible(true);
                 dispose();
             }
         });
@@ -135,6 +133,15 @@ AdminRole x=new AdminRole();
                 if (!found) {
                     JOptionPane.showMessageDialog(null, "No student found with ID: " + searchId, "Search Result", JOptionPane.WARNING_MESSAGE);
                 }
+            }
+        });
+
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                MainWindow main =  new MainWindow();
+                main.setVisible(true); // Show previous frame
+                dispose();
             }
         });
     }
