@@ -50,7 +50,9 @@ public class MainWindow extends JFrame {
         updateStudentBn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                SearchUpdate searchScreen = new SearchUpdate();
+                searchScreen.setVisible(true);
+                dispose();
             }
         });
         deleteStudentBn.addActionListener(new ActionListener() {
