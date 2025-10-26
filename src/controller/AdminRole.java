@@ -3,6 +3,8 @@ package controller;
 import controller.StudentDatabase;
 import model.Student;
 
+import java.util.ArrayList;
+
 public class AdminRole {
     private StudentDatabase database ;
 
@@ -23,6 +25,11 @@ public class AdminRole {
             System.out.println("employee already exists !");
     }
 
+    public void changeStudentOfIndex(int i , Student student){
+        ArrayList <Student> students = database.returnAllRecords();
+        students.set(i,student);
+        database.saveToFile();
+    }
     public void removeStudent(String key){
         if(database.contains(key)) {
             database.deleteRecord(key);

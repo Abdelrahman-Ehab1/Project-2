@@ -1,5 +1,7 @@
 package view;
 import controller.AdminRole;
+import model.Student;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,6 +29,7 @@ private String name,Department,Id;
 private float GPA=-1;
 
     public AddStudent() {
+       Student [] ar1=Admin.getListOfStudents();
         setVisible(true);
         setContentPane(AddStudentPanel);
         setTitle("Add Student");
@@ -58,12 +61,19 @@ private float GPA=-1;
                     JOptionPane.showMessageDialog(null, "Please fill out all fields!", "Error In Saving",JOptionPane.ERROR_MESSAGE);
                     return;
                 }
+                for(Student i:ar1)
+                {
+                    if(i.getStudentID().equalsIgnoreCase(Id)==true)
+                    {
+                        JOptionPane.showMessageDialog(null, "Id is already taken", "Error",JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }
+                }
                 if(u<2)
                 {
                     JOptionPane.showMessageDialog(null, "Your Name should be more than 2 words: " + name,"Error",JOptionPane.ERROR_MESSAGE);
                     return;
                 }
-
                 try {
                     age = Integer.parseInt(AgeField.getText().trim());
                     if (age <= 16 || age > 60) {
@@ -89,6 +99,7 @@ private float GPA=-1;
                 }
                 Admin.addStudent(Id, name, age, gender, Department, GPA);
                 JOptionPane.showMessageDialog(AddStudentPanel, "Student Added");
+                setVisible(false);
             }
         });
 
