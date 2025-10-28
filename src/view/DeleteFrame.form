@@ -5,27 +5,36 @@
     <constraints>
       <xy x="13" y="17" width="437" height="216"/>
     </constraints>
-    <properties/>
+    <properties>
+      <font name="Segoe UI" size="16"/>
+    </properties>
     <border type="none"/>
     <children>
       <scrollpane id="5d3f4" binding="scroller">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <font name="Segoe UI" size="16"/>
+        </properties>
         <border type="none" title=""/>
         <children>
           <component id="8e5ae" class="javax.swing.JTable" binding="table1" default-binding="true">
             <constraints/>
-            <properties/>
+            <properties>
+              <font name="Segoe UI" size="16"/>
+              <intercellSpacing width="1" height="1"/>
+              <rowHeight value="25"/>
+            </properties>
           </component>
         </children>
       </scrollpane>
       <component id="7f30f" class="javax.swing.JButton" binding="deleteButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="Segoe UI" size="16"/>
           <text value="Delete"/>
           <verticalAlignment value="0"/>
         </properties>

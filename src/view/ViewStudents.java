@@ -15,7 +15,7 @@ public class ViewStudents extends JFrame {
 
     public ViewStudents() {
         setTitle("View All Students");
-        setSize(600, 400);
+        setSize(900, 600);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 

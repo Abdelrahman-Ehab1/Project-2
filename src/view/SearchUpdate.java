@@ -25,7 +25,7 @@ public class SearchUpdate extends JFrame {
 AdminRole x=new AdminRole();
     public SearchUpdate() {
 
-        setSize(600, 600);
+        setSize(900, 600);
         setLayout(null);
         setLocationRelativeTo(null);
         setContentPane(SearchUpdatePanel);
@@ -36,8 +36,13 @@ AdminRole x=new AdminRole();
         DefaultTableModel Model =new DefaultTableModel(col,0);
         for(Student i:ar)
         {
-            String [] f=i.lineRepresentation().split(",");
-            Model.addRow(new String[]{f[0], f[1], f[2], f[3], f[4], f[5]});
+            //            String [] f=i.lineRepresentation().split(",");
+//            Model.addRow(new String[]{f[0], f[1], f[2], f[3], f[4], f[5]});
+            String gender = i.isGender() ? "Male" : "Female";        // turning boolean value into male or female
+            Model.addRow(new Object[]{
+                    i.getStudentID(), i.getName(), i.getAge(),
+                    gender, i.getDepartment(), i.getGpa()
+            });
         }
 
         SearchUpdateTable.setModel(Model);

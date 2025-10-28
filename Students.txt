@@ -1,7 +1,3 @@
-1234,Bob Ehab,20,true,jj,3.8
-122,GG vv,21,true,ob7,3.7
-1266,kk ll,21,true,Software,3.1
-123456,sfw hh,20,true,sffs,3.0
-1234567,Bob lld,21,true,dfgd,2.1
-9396,Mohamed Nasser,20,true,Mechanical,3.999
-9441,Mohamed Hany,21,true,Compue,3.4
+1001,yehia tamer,16,true,law,1.6
+2000,mohamed nasser,20,true,cce,4.0
+9622,om ali,20,false,cce,3.8
