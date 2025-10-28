@@ -89,8 +89,9 @@ public class Student {
         }
     }
 
-    public String lineRepresentation() {  // sent to database
-        String line = studentID+","+name+","+age+","+gender+","+department+","+gpa;
+    public String lineRepresentation() {
+        String gdr = gender ? "Male" : "Female";
+        String line = studentID+","+name+","+age+","+gdr+","+department+","+gpa;
         return line;
     }
 

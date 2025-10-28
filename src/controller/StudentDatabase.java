@@ -19,7 +19,7 @@ public Student createRecordFrom(String line) {
     int studentAge = Integer.parseInt(parts[2]);
 
     boolean studentGender ;
-    studentGender = parts[3].trim().equalsIgnoreCase("true");
+    studentGender = parts[3].trim().equalsIgnoreCase("Male");
 
        float gpa = Float.parseFloat(parts[5]);
     return new Student(parts[0], parts[1], studentAge, studentGender, parts[4], gpa);

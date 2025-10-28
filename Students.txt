@@ -1,3 +1,5 @@
-1001,yehia tamer,16,true,law,1.6
-2000,mohamed nasser,20,true,cce,4.0
-9622,om ali,20,false,cce,3.8
+1001,yehia tamer,16,Female,law,1.6
+2000,mohamed nasser,20,Female,cce,4.0
+9622,om ali,20,Female,cce,3.8
+9991,jhcb ddf,20,Male,cce,4.0
+8765,gh gh,28,Female,bme,3.0
