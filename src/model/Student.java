@@ -47,11 +47,11 @@ public class Student {
     }
 
     public void setAge(int age) {   // kda kda msh hy2bl haga tdkhlo gher el int
-        if( age >= 18 && age <= 60){
+        if( age >= 16 && age <= 60){
             this.age = age;
         }
         else{
-            System.out.println("Age must range from 18 to 60");
+            System.out.println("Age must range from 16 to 60");
         }
     }
 

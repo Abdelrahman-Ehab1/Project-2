@@ -37,7 +37,7 @@ private float GPA=-1;
         setContentPane(AddStudentPanel);
         setTitle("Add Student");
 //        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400,400);
+        setSize(900,600);
         setLayout(null);
         setLocationRelativeTo(null);
 
@@ -74,13 +74,13 @@ private float GPA=-1;
                 }
                 if(u<2)
                 {
-                    JOptionPane.showMessageDialog(null, "Your Name should be more than 2 words: " + name,"Error",JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Your Name should be 2 words or more: " + name,"Error",JOptionPane.ERROR_MESSAGE);
                     return;
                 }
                 try {
                     age = Integer.parseInt(AgeField.getText().trim());
-                    if (age <= 16 || age > 60) {
-                        JOptionPane.showMessageDialog(null, "Your age should be between 1 and 100: " + age,
+                    if (age < 16 || age > 60) {
+                        JOptionPane.showMessageDialog(null, "Your age should be between 16 and 60: " + age,
                                 "Error", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
